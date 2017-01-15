@@ -1,0 +1,9 @@
+Django==1.9.7
+django-disqus==0.5
+django-tagging==0.4.5
+mock==2.0.0
+olefile==0.44
+pbr==1.10.0
+Pillow==4.0.0
+pytz==2016.10
+six==1.10.0
