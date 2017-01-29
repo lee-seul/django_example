@@ -17,13 +17,19 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.conf.urls.static import static
+from django.conf import settings
+
 from example01.views import HomeView
+
 
 urlpatterns = [
     url(r'^$', HomeView.as_view(), name='home'),
     url(r'^admin/', admin.site.urls),
     url(r'^bookmark/', include('bookmark.urls', namespace='bookmark')),
     url(r'^blog/', include('blog.urls', namespace='blog')),
+    
+    url(r'^photo/', include('photo.urls', namespace='photo')),
 
     # Class-based views for Bookmark app
     #url(r'^bookmark/$', BookmarkLV.as_view(), name='index'),
@@ -32,4 +38,4 @@ urlpatterns = [
     # View가 간단할 경우 urls.py에서 처리 가능, 예시
     # url(r'^bookmark/$', ListView.as_view(model=Bookmark), name='index'),
     # url(r'^bookmark/?P<pk>\d+/$', DetailView.as_view(model=Bookmark), name='detail'),
-]
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
