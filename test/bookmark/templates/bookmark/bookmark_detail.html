@@ -1,10 +1,9 @@
-<!DOCTYPE>
-<html>
-  <head>
-    <title>Bookmark Detail</title>
-  </head>
+{% extends 'base.html' %}
 
-  <body>
+{% block title %}Bookmark Detail{% endblock %}
+
+
+{% block content %}
     <div id="content">
       <h1>{{ object.title }}</h1>
 
@@ -12,6 +11,5 @@
         <li>URL: <a href="{{ object.url }}">{{ object.url }}</a></li>
       </ul>
     </div>
-  </body>
-
-</html>
+  
+{% endblock %}
