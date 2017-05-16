@@ -10,5 +10,6 @@ urlpatterns = [
     url(r'^tag/(?P<tag>[^/]+(?u))/$', PostTOL.as_view(), 
         name='tagged_object_list'),
 
+    url(r'^search/$', SearchFormView.as_view(), name='search'),
 ]
 
