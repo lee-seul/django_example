@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'bookmark.apps.BookmarkConfig',
     'blog.apps.BlogConfig',
     'tagging.apps.TaggingConfig',
+    'photo.apps.PhotoConfig',
 ]
 
 MIDDLEWARE_CLASSES = [
